@@ -117,12 +117,6 @@ def game_hash
     }
   }
 end
-def players
-  home_players = game_hash.fetch(:home).fetch(:players)
-  away_players = game_hash.fetch(:away).fetch(:players)
-  home_players + away_players
-end
-#Methods to get stuff
 def teams
   game_hash.values
 end
@@ -176,9 +170,4 @@ end
 
  def player_stats(player_name)
   get_player(player_name).reject { |key, value| key == :player_name }
-end
-
-def shoe_size
-player = get_shoe_size
-  player.fetch(:rebounds)
 end
