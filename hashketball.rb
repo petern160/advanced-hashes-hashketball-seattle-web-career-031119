@@ -127,8 +127,8 @@ def teams
   game_hash.values
 end
 
-def get_player(name)
-  players.find {|player| player.fetch(:player_name) == name}
+def get_player(person)
+  players.find {|player| player.fetch(:player_name) == person}
 end
 
 def get_team(team_name)
@@ -139,13 +139,13 @@ def get_shoe_size
   players.sort_by {|player| player.fetch(:shoe) }.last
 end
 
-def num_points_scored(name)
-  player = get_player(name)
+def num_points_scored(athlete)
+  player = get_player(athlete)
   player.fetch(:points)
 end
 
-def shoe_size(name)
-  player = get_player(name)
+def shoe_size(athlete)
+  player = get_player(athlete)
   player.fetch(:shoe)
 end
 
