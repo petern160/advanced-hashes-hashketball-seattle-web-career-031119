@@ -138,7 +138,7 @@ end
 def get_shoe_size
   players.sort_by {|player| player.fetch(:shoe) }.last
 end
-#Methods for lab
+
 def num_points_scored(name)
   player = get_player(name)
   player.fetch(:points)
