@@ -144,8 +144,8 @@ def num_points_scored(athlete)
   player.fetch(:points)
 end
 
-def shoe_size(athlete)
-  player = get_player(athlete)
+def shoe_size(player_name)
+  player = get_player(player_name)
   player.fetch(:shoe)
 end
 
