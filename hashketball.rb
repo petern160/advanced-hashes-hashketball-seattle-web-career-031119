@@ -171,3 +171,8 @@ end
  def player_stats(player_name)
   get_player(player_name).reject { |key, value| key == :player_name }
 end
+
+def big_shoe_rebounds
+  player = get_shoe_size
+ player.fetch(:rebounds)
+end
