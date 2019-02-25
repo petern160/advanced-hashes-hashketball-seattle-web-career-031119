@@ -127,8 +127,8 @@ def teams
   game_hash.values
 end
 
-def get_player(name)
-  players.find {|player| player.fetch(:player_name) == name}
+def get_player(player)
+  players.find {|player| player.fetch(:player_name) == player}
 end
 
 def get_team(team_name)
