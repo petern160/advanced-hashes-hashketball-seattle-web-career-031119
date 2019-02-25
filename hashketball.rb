@@ -122,7 +122,7 @@ def players
   away_players = game_hash.fetch(:away).fetch(:players)
   home_players + away_players
 end
-#Methods to get stuff
+
 def teams
   game_hash.values
 end
