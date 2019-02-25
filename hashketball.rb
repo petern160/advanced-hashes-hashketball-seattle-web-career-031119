@@ -117,6 +117,12 @@ def game_hash
     }
   }
 end
+def players
+  home_players = game_hash.fetch(:home).fetch(:players)
+  away_players = game_hash.fetch(:away).fetch(:players)
+  home_players + away_players
+end
+#Methods to get stuff
 def teams
   game_hash.values
 end
@@ -132,7 +138,7 @@ end
 def get_shoe_size
   players.sort_by {|player| player.fetch(:shoe) }.last
 end
-
+#Methods for lab
 def num_points_scored(name)
   player = get_player(name)
   player.fetch(:points)
@@ -166,5 +172,5 @@ end
 
 def big_shoe_rebounds
   player = get_shoe_size
- player.fetch(:rebounds)
+  player.fetch(:rebounds)
 end
