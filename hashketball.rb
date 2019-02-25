@@ -166,8 +166,8 @@ def player_numbers(team_name)
   end
 end
 
-def player_stats(athlete)
-  get_player(athlete).reject { |key, value| key == :athlete }
+def player_stats(player_name)
+  get_player(player_name).reject { |key, value| key == :player_name }
 end
 
 def big_shoe_rebounds
